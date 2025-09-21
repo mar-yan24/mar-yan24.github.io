@@ -1,0 +1,355 @@
+/* Experience Page - Mount Everest Visualization */
+.experience-page {
+  background: linear-gradient(to bottom,
+    #87CEEB 0%,      /* Sky blue at top */
+    #4682B4 20%,     /* Deeper blue */
+    #708090 50%,     /* Gray mountain */
+    #2F4F4F 80%,     /* Dark mountain base */
+    #1a1a1a 100%     /* Dark ground */
+  );
+  min-height: 500vh; /* Long scroll for parallax effect */
+}
+
+.everest-container {
+  position: relative;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.mountain-view {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 500vh;
+}
+
+/* Camp Positions */
+.camp {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  will-change: transform;
+}
+
+.camp.visible {
+  opacity: 1;
+}
+
+.summit {
+  top: 10%;
+  z-index: 6;
+}
+
+.camp4 {
+  top: 25%;
+  z-index: 5;
+}
+
+.camp3 {
+  top: 40%;
+  z-index: 4;
+}
+
+.camp2 {
+  top: 55%;
+  z-index: 3;
+}
+
+.camp1 {
+  top: 70%;
+  z-index: 2;
+}
+
+.basecamp {
+  top: 85%;
+  z-index: 1;
+}
+
+/* Camp Markers */
+.camp-marker {
+  width: 20px;
+  height: 20px;
+  background: #ff4444;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 20px rgba(255, 68, 68, 0.8);
+  animation: pulse 2s infinite;
+  position: relative;
+}
+
+.camp-marker::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 50%;
+  animation: ping 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Summit Flag */
+.flag {
+  font-size: 2rem;
+  text-align: center;
+  animation: wave 3s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
+/* Camp Content */
+.camp-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.camp-content h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Job Cards */
+.job-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateX(2deg);
+  transition: all 0.3s ease;
+}
+
+.job-card:hover {
+  transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.job-card h3 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.job-card ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.job-card li {
+  margin-bottom: 0.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Badges */
+.date-badge {
+  display: inline-block;
+  background: #4ade80;
+  color: #0f172a;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.altitude {
+  display: inline-block;
+  color: #f97316;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Tech Tags */
+.tech-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  background: rgba(30, 60, 114, 0.1);
+  color: #1e3c72;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(30, 60, 114, 0.3);
+}
+
+/* Elevation Indicator */
+.elevation-indicator {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  text-align: center;
+}
+
+.current-elevation {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  writing-mode: vertical-rl;
+  margin-bottom: 1rem;
+}
+
+.elevation-bar {
+  width: 4px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.elevation-progress {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, #4ade80, #22c55e);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+/* Scroll Prompt */
+.scroll-prompt {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-weight: 600;
+  animation: bounce 2s infinite;
+  z-index: 100;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Blog Styles for Peaks Page */
+.blog-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.blog-date {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.difficulty-badge {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: #0f172a;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.blog-title {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  color: #f0fdf4;
+  margin-bottom: 1rem;
+}
+
+.blog-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  color: #4ade80;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.blog-content {
+  color: #e2e8f0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.blog-content p {
+  margin-bottom: 1rem;
+}
+
+.blog-content strong {
+  color: #4ade80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .elevation-indicator {
+    right: 1rem;
+  }
+  
+  .camp-content {
+    padding: 0 1rem;
+  }
+  
+  .job-card {
+    padding: 1.5rem;
+  }
+  
+  .blog-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
