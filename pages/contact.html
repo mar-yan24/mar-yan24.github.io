@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Mark Yang</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav-container">
+    <div class="menu">
+      <a href="../index.html" class="menu-item">HOME</a>
+      <a href="about.html" class="menu-item">ABOUT</a>
+      <a href="projects.html" class="menu-item">PROJECTS</a>
+      <a href="peaks.html" class="menu-item">PEAKS</a>
+      <a href="experience.html" class="menu-item">EXPERIENCE</a>
+      <a href="https://github.com/mar-yan24" target="_blank" class="menu-item">GITHUB</a>
+      <a href="contact.html" class="menu-item active">CONTACT</a>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <h1>Let's Connect</h1>
+    <p class="tagline">Let's climb new heights together</p>
+    
+    <div class="contact-content">
+      <div class="contact-intro">
+        <p>Reach out to me! I love making new friends.</p>
+      </div>
+      
+      <div class="contact-methods">
+        <a href="mailto:markyang2005@gmail.com" class="contact-card email-card">
+          <div class="contact-icon">📧</div>
+          <h3>Email</h3>
+          <p>markyang2005@gmail.com</p>
+          <span class="contact-action">Send me an email →</span>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/mark-yang-75b609257/" target="_blank" class="contact-card linkedin-card">
+          <div class="contact-icon">💼</div>
+          <h3>LinkedIn</h3>
+          <p>Mark Yang</p>
+          <span class="contact-action">Connect on LinkedIn →</span>
+        </a>
+        
+        <a href="https://github.com/mar-yan24" target="_blank" class="contact-card github-card">
+          <div class="contact-icon">💻</div>
+          <h3>GitHub</h3>
+          <p>@markyangdev</p>
+          <span class="contact-action">View my code →</span>
+        </a>
+      </div>
+      
+      <div class="availability-box">
+        <h3>Current Availability</h3>
+        <div class="availability-grid">
+          <div class="availability-item">
+            <span class="status-dot available"></span>
+            <div>
+              <strong>Open Source Projects</strong>
+              <p>Always interested in contributing to meaningful projects</p>
+            </div>
+          </div>
+          <div class="availability-item">
+            <span class="status-dot available"></span>
+            <div>
+              <strong>Research Collaborations</strong>
+              <p>Particularly in robotics and DRL</p>
+            </div>
+          </div>
+          <div class="availability-item">
+            <span class="status-dot available"></span>
+            <div>
+              <strong>2026 Internships</strong>
+              <p>Seeking opportunities in software and hardware engineering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quick-facts">
+        <h3>Quick Facts</h3>
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Location</span>
+            <span class="fact-value">Boston, MA</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">University</span>
+            <span class="fact-value">Northeastern University</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Graduation</span>
+            <span class="fact-value">April 2028</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Time Zone</span>
+            <span class="fact-value">EST (the best and only timezone lets be real)</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quote-box" style="margin-top: 3rem;">
+        <p class="quote-text">"There is value in fighting with all your strength. And being able to stand atop a mountain is just a byproduct of that."</p>
+        <p class="quote-author">- Katou Buntarou</p>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .contact-intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #e2e8f0;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+    }
+    
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .contact-card {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 2rem;
+      border-radius: 15px;
+      text-decoration: none;
+      color: #e2e8f0;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #4ade80, #22c55e);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .contact-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.12);
+    }
+    
+    .contact-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      filter: grayscale(0);
+    }
+    
+    .contact-card h3 {
+      font-size: 1.5rem;
+      color: #4ade80;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-card p {
+      color: #cbd5e1;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    
+    .contact-action {
+      color: #4ade80;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .availability-box {
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.3);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 3rem;
+    }
+    
+    .availability-box h3 {
+      color: #4ade80;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+    
+    .availability-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    
+    .availability-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-top: 0.5rem;
+      flex-shrink: 0;
+      position: relative;
+    }
+    
+    .status-dot.available {
+      background: #4ade80;
+      box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+      animation: pulse-dot 2s infinite;
+    }
+    
+    @keyframes pulse-dot {
+      0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% { 
+        transform: scale(1.2);
+        opacity: 0.8;
+      }
+    }
+    
+    .availability-item strong {
+      color: #f0fdf4;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    .availability-item p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    
+    .quick-facts {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+    }
+    
+    .quick-facts h3 {
+      color: #4ade80;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+    
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .fact-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .fact-label {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    
+    .fact-value {
+      color: #e2e8f0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-methods {
+        grid-template-columns: 1fr;
+      }
+      
+      .facts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</body>
+</html>
