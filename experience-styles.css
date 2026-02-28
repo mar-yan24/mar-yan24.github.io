@@ -6,7 +6,7 @@
     #1a1a1a 60%,
     #111111 100%
   );
-  min-height: 500vh; /* Long scroll for parallax effect */
+  min-height: 400vh;
 }
 
 .everest-container {
@@ -20,7 +20,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  height: 500vh;
+  height: 400vh;
 }
 
 /* Camp Positions */
@@ -37,32 +37,22 @@
 }
 
 .summit {
-  top: 10%;
-  z-index: 6;
-}
-
-.camp4 {
-  top: 25%;
-  z-index: 5;
-}
-
-.camp3 {
-  top: 40%;
+  top: 8%;
   z-index: 4;
 }
 
 .camp2 {
-  top: 55%;
+  top: 33%;
   z-index: 3;
 }
 
 .camp1 {
-  top: 70%;
+  top: 58%;
   z-index: 2;
 }
 
 .basecamp {
-  top: 85%;
+  top: 83%;
   z-index: 1;
 }
 
