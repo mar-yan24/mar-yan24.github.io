@@ -31,21 +31,21 @@
       
       <div class="contact-methods">
         <a href="mailto:markyang2005@gmail.com" class="contact-card email-card">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon"></div>
           <h3>Email</h3>
           <p>markyang2005@gmail.com</p>
           <span class="contact-action">Send me an email →</span>
         </a>
         
         <a href="https://www.linkedin.com/in/mark-yang-75b609257/" target="_blank" class="contact-card linkedin-card">
-          <div class="contact-icon">💼</div>
+          <div class="contact-icon"></div>
           <h3>LinkedIn</h3>
           <p>Mark Yang</p>
           <span class="contact-action">Connect on LinkedIn →</span>
         </a>
         
         <a href="https://github.com/mar-yan24" target="_blank" class="contact-card github-card">
-          <div class="contact-icon">💻</div>
+          <div class="contact-icon"></div>
           <h3>GitHub</h3>
           <p>@mar-yan24</p>
           <span class="contact-action">View my code →</span>
@@ -114,36 +114,37 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    
+
     .contact-intro {
       text-align: center;
       font-size: 1.2rem;
-      color: #e2e8f0;
+      color: #cccccc;
       margin-bottom: 3rem;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       border-radius: 12px;
     }
-    
+
     .contact-methods {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
     }
-    
+
     .contact-card {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
       padding: 2rem;
       border-radius: 15px;
       text-decoration: none;
-      color: #e2e8f0;
+      color: #cccccc;
       text-align: center;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      border: 1px solid #333333;
     }
-    
+
     .contact-card::before {
       content: '';
       position: absolute;
@@ -151,72 +152,70 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, #4ade80, #22c55e);
+      background: #ffffff;
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
-    
+
     .contact-card:hover::before {
       transform: scaleX(1);
     }
-    
+
     .contact-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-3px);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.08);
     }
-    
+
     .contact-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      filter: grayscale(0);
+      display: none;
     }
-    
+
     .contact-card h3 {
       font-size: 1.5rem;
-      color: #4ade80;
+      color: #e0e0e0;
       margin-bottom: 0.5rem;
     }
-    
+
     .contact-card p {
-      color: #cbd5e1;
+      color: #999999;
       margin-bottom: 1rem;
       font-size: 1.1rem;
     }
-    
+
     .contact-action {
-      color: #4ade80;
+      color: #e0e0e0;
       font-weight: 600;
       font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-    
+
     .availability-box {
-      background: rgba(74, 222, 128, 0.1);
-      border: 1px solid rgba(74, 222, 128, 0.3);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid #333333;
       padding: 2rem;
       border-radius: 15px;
       margin-bottom: 3rem;
     }
-    
+
     .availability-box h3 {
-      color: #4ade80;
+      color: #e0e0e0;
       margin-bottom: 1.5rem;
       font-size: 1.5rem;
     }
-    
+
     .availability-grid {
       display: grid;
       gap: 1.5rem;
     }
-    
+
     .availability-item {
       display: flex;
       align-items: flex-start;
       gap: 1rem;
     }
-    
+
     .status-dot {
       width: 12px;
       height: 12px;
@@ -225,79 +224,67 @@
       flex-shrink: 0;
       position: relative;
     }
-    
+
     .status-dot.available {
-      background: #4ade80;
-      box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
-      animation: pulse-dot 2s infinite;
+      background: #ffffff;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
     }
-    
-    @keyframes pulse-dot {
-      0%, 100% { 
-        transform: scale(1);
-        opacity: 1;
-      }
-      50% { 
-        transform: scale(1.2);
-        opacity: 0.8;
-      }
-    }
-    
+
     .availability-item strong {
-      color: #f0fdf4;
+      color: #e0e0e0;
       display: block;
       margin-bottom: 0.25rem;
     }
-    
+
     .availability-item p {
-      color: #cbd5e1;
+      color: #999999;
       font-size: 0.95rem;
     }
-    
+
     .quick-facts {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       padding: 2rem;
       border-radius: 15px;
       margin-bottom: 2rem;
     }
-    
+
     .quick-facts h3 {
-      color: #4ade80;
+      color: #e0e0e0;
       margin-bottom: 1.5rem;
       font-size: 1.5rem;
     }
-    
+
     .facts-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
     }
-    
+
     .fact-item {
       display: flex;
       flex-direction: column;
     }
-    
+
     .fact-label {
-      color: #94a3b8;
+      color: #777777;
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 0.25rem;
     }
-    
+
     .fact-value {
-      color: #e2e8f0;
+      color: #cccccc;
       font-size: 1.1rem;
       font-weight: 600;
     }
-    
+
     /* Responsive */
     @media (max-width: 768px) {
       .contact-methods {
         grid-template-columns: 1fr;
       }
-      
+
       .facts-grid {
         grid-template-columns: repeat(2, 1fr);
       }

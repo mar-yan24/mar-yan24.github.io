@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #f5f5f5;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+  color: #cccccc;
+  background: #111111;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -41,16 +41,16 @@ body.homepage::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, 
-    rgba(30, 60, 114, 0.3) 0%, 
-    rgba(30, 60, 114, 0.5) 50%, 
-    rgba(30, 60, 114, 0.7) 100%);
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.75) 100%);
   z-index: -1;
 }
 
 /* Homepage Hero Styles */
 .hero-container {
-  background: rgba(10, 20, 40, 0.85);
+  background: rgba(0, 0, 0, 0.7);
   margin-top: 120px;
 }
 
@@ -60,7 +60,7 @@ body.homepage::after {
 }
 
 .home-info {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
 }
 
@@ -76,30 +76,30 @@ body.homepage::after {
 .cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #4ade80, #22c55e);
-  color: #0f172a;
+  background: #ffffff;
+  color: #111111;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 700;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
 
 .cta-button.secondary {
   background: transparent;
-  border: 2px solid #4ade80;
-  color: #4ade80;
+  border: 2px solid #ffffff;
+  color: #ffffff;
 }
 
 .cta-button.secondary:hover {
-  background: rgba(74, 222, 128, 0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Content Sections for Sub-pages */
@@ -108,7 +108,7 @@ body.homepage::after {
 }
 
 .text-content {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   padding: 2rem;
   border-radius: 12px;
   line-height: 1.8;
@@ -132,21 +132,21 @@ body.homepage::after {
 }
 
 .value-card {
-  background: rgba(74, 222, 128, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid rgba(74, 222, 128, 0.3);
+  border: 1px solid #333333;
   transition: all 0.3s ease;
 }
 
 .value-card:hover {
-  transform: translateY(-5px);
-  background: rgba(74, 222, 128, 0.15);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .value-card h3 {
-  color: #4ade80;
+  color: #e0e0e0;
   margin-bottom: 1rem;
 }
 
@@ -164,14 +164,14 @@ body.homepage::after {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #4ade80, #22c55e);
+  background: linear-gradient(to bottom, #555555, #333333);
 }
 
 .timeline-item {
   position: relative;
   margin-bottom: 3rem;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
 }
 
@@ -182,13 +182,13 @@ body.homepage::after {
   top: 2rem;
   width: 12px;
   height: 12px;
-  background: #4ade80;
+  background: #ffffff;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.3);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15);
 }
 
 .timeline-date {
-  color: #4ade80;
+  color: #999999;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -199,7 +199,7 @@ body.homepage::after {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(30, 60, 114, 0.95);
+  background: rgba(17, 17, 17, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   animation: slideDown 0.6s ease-out;
@@ -227,7 +227,7 @@ body.homepage::after {
 
 .menu-item {
   text-decoration: none;
-  color: #e8f4f8;
+  color: #cccccc;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 1px;
@@ -245,7 +245,7 @@ body.homepage::after {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #4ade80, #22c55e);
+  background: #ffffff;
   transition: width 0.3s ease;
 }
 
@@ -256,7 +256,7 @@ body.homepage::after {
 
 .menu-item:hover,
 .menu-item.active {
-  color: #4ade80;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -265,7 +265,7 @@ body.homepage::after {
   max-width: 1200px;
   margin: 120px auto 4rem;
   padding: 3rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -289,22 +289,13 @@ h1 {
   font-size: 3.5rem;
   text-align: center;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #4ade80, #22c55e, #16a34a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: glow 3s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from { filter: brightness(1); }
-  to { filter: brightness(1.2); }
+  color: #e0e0e0;
 }
 
 .tagline {
   text-align: center;
   font-style: italic;
-  color: #cbd5e1;
+  color: #777777;
   margin-bottom: 3rem;
   font-size: 1.2rem;
 }
@@ -334,37 +325,37 @@ h1 {
   height: 280px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid rgba(74, 222, 128, 0.5);
+  border: 4px solid #333333;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .profile-pic:hover {
-  transform: scale(1.05) rotate(3deg);
-  box-shadow: 0 15px 50px rgba(74, 222, 128, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
 }
 
 .profile-text {
   flex: 1;
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #e2e8f0;
+  color: #cccccc;
 }
 
 .profile-text strong {
-  color: #4ade80;
+  color: #e0e0e0;
   font-weight: 700;
 }
 
 .profile-text a {
-  color: #4ade80;
+  color: #e0e0e0;
   text-decoration: none;
-  border-bottom: 1px dotted #4ade80;
+  border-bottom: 1px dotted #e0e0e0;
   transition: all 0.3s ease;
 }
 
 .profile-text a:hover {
-  color: #22c55e;
+  color: #ffffff;
   border-bottom-style: solid;
 }
 
@@ -376,7 +367,7 @@ h1 {
 .section-title {
   font-family: 'Merriweather', serif;
   font-size: 2rem;
-  color: #4ade80;
+  color: #e0e0e0;
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -384,7 +375,7 @@ h1 {
 }
 
 .section-title::before {
-  content: '🏔️';
+  content: '\2014';
   font-size: 1.5rem;
 }
 
@@ -397,7 +388,7 @@ h1 {
 }
 
 .mountain-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 15px;
   padding: 1.5rem;
   transition: all 0.3s ease;
@@ -413,7 +404,7 @@ h1 {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a);
+  background: #ffffff;
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -423,15 +414,15 @@ h1 {
 }
 
 .mountain-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .mountain-name {
   font-weight: 700;
   font-size: 1.3rem;
-  color: #f0fdf4;
+  color: #e0e0e0;
   margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -439,13 +430,13 @@ h1 {
 }
 
 .mountain-details {
-  color: #cbd5e1;
+  color: #999999;
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
 .elevation {
-  color: #4ade80;
+  color: #e0e0e0;
   font-weight: 600;
 }
 
@@ -456,20 +447,20 @@ h1 {
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #4ade80, #22c55e);
-  color: #0f172a;
+  background: #e0e0e0;
+  color: #111111;
 }
 
-.grade-badge.v4 { background: linear-gradient(135deg, #86efac, #4ade80); }
-.grade-badge.v5 { background: linear-gradient(135deg, #4ade80, #22c55e); }
-.grade-badge.v6 { background: linear-gradient(135deg, #facc15, #f59e0b); }
-.grade-badge.v8 { background: linear-gradient(135deg, #fb923c, #f97316); }
-.grade-badge.v10 { background: linear-gradient(135deg, #f87171, #ef4444); }
-.grade-badge.v12 { background: linear-gradient(135deg, #e879f9, #c084fc); }
+.grade-badge.v4 { background: #cccccc; color: #111111; }
+.grade-badge.v5 { background: #bbbbbb; color: #111111; }
+.grade-badge.v6 { background: #aaaaaa; color: #111111; }
+.grade-badge.v8 { background: #888888; color: #111111; }
+.grade-badge.v10 { background: #666666; color: #e0e0e0; }
+.grade-badge.v12 { background: #444444; color: #e0e0e0; }
 
 .grade-legend {
   text-align: center;
-  color: #94a3b8;
+  color: #777777;
   font-size: 0.9rem;
   margin-bottom: 1rem;
   font-style: italic;
@@ -477,7 +468,7 @@ h1 {
 
 /* Tech Stack Tags */
 .tech-stack {
-  color: #4ade80;
+  color: #999999;
   font-weight: 600;
   font-size: 0.85rem;
   margin-bottom: 0.75rem;
@@ -492,7 +483,7 @@ h1 {
 }
 
 .project-link {
-  color: #4ade80;
+  color: #e0e0e0;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -501,14 +492,14 @@ h1 {
 }
 
 .project-link:hover {
-  color: #22c55e;
-  border-bottom: 1px solid #22c55e;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
 }
 
 /* Info Boxes */
 .info-box {
-  background: rgba(74, 222, 128, 0.1);
-  border-left: 4px solid #4ade80;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #555555;
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 8px;
@@ -516,7 +507,7 @@ h1 {
 }
 
 .info-box strong {
-  color: #4ade80;
+  color: #e0e0e0;
 }
 
 .info-box p {
@@ -532,16 +523,16 @@ h1 {
   text-align: center;
   padding: 2rem;
   margin: 3rem 0;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 15px;
   position: relative;
 }
 
 .quote-box::before,
 .quote-box::after {
-  content: '"';
+  content: '\201C';
   font-size: 4rem;
-  color: rgba(74, 222, 128, 0.3);
+  color: rgba(255, 255, 255, 0.15);
   position: absolute;
 }
 
@@ -558,12 +549,12 @@ h1 {
 .quote-text {
   font-size: 1.3rem;
   font-style: italic;
-  color: #e2e8f0;
+  color: #cccccc;
   margin-bottom: 1rem;
 }
 
 .quote-author {
-  color: #4ade80;
+  color: #999999;
   font-weight: 600;
 }
 
@@ -572,16 +563,16 @@ h1 {
   text-align: center;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #333333;
 }
 
 .contact p {
   margin-bottom: 1rem;
-  color: #cbd5e1;
+  color: #999999;
 }
 
 .email {
-  color: #4ade80;
+  color: #e0e0e0;
   font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -590,7 +581,7 @@ h1 {
 }
 
 .email:hover {
-  text-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -603,18 +594,18 @@ h1 {
 }
 
 .social-link {
-  color: #94a3b8;
+  color: #999999;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  border: 1px solid #333333;
   border-radius: 8px;
 }
 
 .social-link:hover {
-  color: #4ade80;
-  border-color: #4ade80;
+  color: #ffffff;
+  border-color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -627,14 +618,14 @@ h1 {
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   padding: 1.5rem;
   border-radius: 12px;
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  border: 1px solid #333333;
 }
 
 .skill-category h3 {
-  color: #4ade80;
+  color: #e0e0e0;
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
@@ -646,17 +637,17 @@ h1 {
 }
 
 .skill-tag {
-  background: rgba(74, 222, 128, 0.15);
-  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.06);
+  color: #cccccc;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
-  border: 1px solid rgba(74, 222, 128, 0.3);
+  border: 1px solid #333333;
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: rgba(74, 222, 128, 0.25);
+  background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
 }
 
@@ -666,51 +657,51 @@ h1 {
     margin-top: 100px;
     padding: 2rem;
   }
-  
+
   h1 {
     font-size: 2.5rem;
   }
-  
+
   .tagline {
     font-size: 1rem;
   }
-  
+
   .profile {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .profile-pic {
     width: 200px;
     height: 200px;
   }
-  
+
   .profile-text {
     font-size: 1rem;
   }
-  
+
   .mountain-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .menu {
     gap: 1rem;
     padding: 1rem;
   }
-  
+
   .menu-item {
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
   }
-  
+
   .section-title {
     font-size: 1.5rem;
   }
-  
+
   .mountain-name {
     font-size: 1.1rem;
   }
-  
+
   .quote-text {
     font-size: 1.1rem;
   }
@@ -720,21 +711,21 @@ h1 {
   h1 {
     font-size: 2rem;
   }
-  
+
   .container {
     margin-top: 80px;
     padding: 1.5rem;
   }
-  
+
   .menu-item {
     font-size: 0.75rem;
     padding: 0.3rem 0.6rem;
   }
-  
+
   .info-box {
     padding: 1rem;
   }
-  
+
   .quote-box::before,
   .quote-box::after {
     font-size: 2rem;
