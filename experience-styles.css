@@ -23,37 +23,39 @@
   height: 400vh;
 }
 
-/* Camp Positions */
+/* Camp Positions - base camp at top, summit at bottom (scroll to climb) */
 .camp {
   position: absolute;
   width: 100%;
   opacity: 0;
-  transition: opacity 0.6s ease;
-  will-change: transform;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: transform, opacity;
 }
 
 .camp.visible {
   opacity: 1;
-}
-
-.summit {
-  top: 8%;
-  z-index: 4;
-}
-
-.camp2 {
-  top: 33%;
-  z-index: 3;
-}
-
-.camp1 {
-  top: 58%;
-  z-index: 2;
+  transform: translateY(0);
 }
 
 .basecamp {
-  top: 83%;
+  top: 5%;
   z-index: 1;
+}
+
+.camp1 {
+  top: 30%;
+  z-index: 2;
+}
+
+.camp2 {
+  top: 55%;
+  z-index: 3;
+}
+
+.summit {
+  top: 80%;
+  z-index: 4;
 }
 
 /* Camp Markers */
@@ -210,6 +212,7 @@
   animation: bounce 2s infinite;
   z-index: 100;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease;
 }
 
 @keyframes bounce {
