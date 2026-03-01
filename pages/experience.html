@@ -121,7 +121,7 @@
       </div>
 
       <div class="elevation-indicator">
-        <span class="current-elevation">Summit</span>
+        <span class="current-elevation">Base Camp</span>
         <div class="elevation-bar">
           <div class="elevation-progress"></div>
         </div>
@@ -141,10 +141,10 @@
     const scrollPrompt = document.querySelector('.scroll-prompt');
 
     const elevations = [
-      { name: 'Summit', threshold: 0 },
-      { name: 'Camp II', threshold: 0.25 },
-      { name: 'Camp I', threshold: 0.5 },
-      { name: 'Base Camp', threshold: 0.75 }
+      { name: 'Base Camp', threshold: 0 },
+      { name: 'Camp I', threshold: 0.25 },
+      { name: 'Camp II', threshold: 0.5 },
+      { name: 'Summit', threshold: 0.75 }
     ];
 
     function handleScroll() {
