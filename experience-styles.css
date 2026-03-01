@@ -193,7 +193,7 @@
 
 .elevation-progress {
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
   background: #ffffff;
   border-radius: 2px;
