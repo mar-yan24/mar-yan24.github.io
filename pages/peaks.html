@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peaks - Mark Yang</title>
+  <meta name="description" content="Mark Yang's hiking adventures — Mt. Fuji, Slieve Donard, Carrauntoohil and more.">
+  <meta property="og:title" content="Peaks - Mark Yang">
+  <meta property="og:description" content="Hiking adventures — Mt. Fuji, Slieve Donard, Carrauntoohil and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mar-yan24.github.io/pages/peaks.html">
+  <meta property="og:image" content="https://mar-yan24.github.io/images/mt_fuji.jpg">
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="nav-container">
-    <div class="menu">
-      <a href="../index.html" class="menu-item">HOME</a>
-      <a href="about.html" class="menu-item">ABOUT</a>
-      <a href="projects.html" class="menu-item">PROJECTS</a>
-      <a href="peaks.html" class="menu-item active">PEAKS</a>
-      <a href="experience.html" class="menu-item">EXPERIENCE</a>
-      <a href="https://github.com/mar-yan24" target="_blank" class="menu-item">GITHUB</a>
-      <a href="contact.html" class="menu-item">CONTACT</a>
-    </div>
+  <nav class="nav-container" aria-label="Main navigation">
+    <ul class="menu">
+      <li><a href="../index.html" class="menu-item">HOME</a></li>
+      <li><a href="about.html" class="menu-item">ABOUT</a></li>
+      <li><a href="projects.html" class="menu-item">PROJECTS</a></li>
+      <li><a href="peaks.html" class="menu-item active">PEAKS</a></li>
+      <li><a href="experience.html" class="menu-item">EXPERIENCE</a></li>
+      <li><a href="https://github.com/mar-yan24" target="_blank" class="menu-item">GITHUB</a></li>
+      <li><a href="contact.html" class="menu-item">CONTACT</a></li>
+    </ul>
   </nav>
-  
-  <div class="container">
+
+  <main class="container">
     <h1>Peak Adventures</h1>
     <p class="tagline">The mountains whisper secrets</p>
     
@@ -38,8 +44,8 @@
         </div>
         <div class="blog-content">
           <p>Went to Japan summer of 2025 and it was one of my lifetime highlights. Took a bus up to 5th station and climbed the Yoshida Trail up Mt. Fuji under near perfect conditions.</p>
-          <p>Unfortunately, as we climbed higher and higher, my friends started falling one by one. I didn't want to go on without them so unfortunately we weren't able to make it to the top but a beautiful experience nontheless. We also saw clowns climbing the mountain lol.</p>
-          <img src="../images/mt_fuji.jpg" style="width: 50%; height: 50%"/>
+          <p>Unfortunately, as we climbed higher and higher, my friends started falling one by one. I didn't want to go on without them so unfortunately we weren't able to make it to the top but a beautiful experience nonetheless. We also saw clowns climbing the mountain lol.</p>
+          <img src="../images/mt_fuji.jpg" alt="View from the Yoshida Trail on Mt. Fuji" class="blog-image" loading="lazy">
           <p><strong>Route:</strong> Yoshida Trail<br>
           <strong>Conditions:</strong> Clear and Windy :D<br>
           <strong>Highlight:</strong> FRIENDS FRIENDS</p>
@@ -58,9 +64,9 @@
           <span class="stat">Duration: 3 hours</span>
         </div>
         <div class="blog-content">
-          <p>Climbed this peak with walking pneumonia, would not recommend. The conditions were foggy and windy and the hostle we stayed at had literally no people in it, creepy as hell.</p>
-          <p>Overall, would not do this again. Weather and sickness sorta ruined the hike for me, at least my freind had fun lol.</p>
-          <img src="../images/Slieve_Donard.jpg" style="width: 50%; height: 50%"/>
+          <p>Climbed this peak with walking pneumonia, would not recommend. The conditions were foggy and windy and the hostel we stayed at had literally no people in it, creepy as hell.</p>
+          <p>Overall, would not do this again. Weather and sickness sorta ruined the hike for me, at least my friend had fun lol.</p>
+          <img src="../images/Slieve_Donard.jpg" alt="Foggy summit of Slieve Donard, Northern Ireland" class="blog-image" loading="lazy">
           <p><strong>Route:</strong> Ngl I forgot the name of the Route<br>
           <strong>Conditions:</strong> Too Cloudy and Foggy Again <br>
           <strong>Highlight:</strong> I had walking pneumonia</p>
@@ -81,7 +87,7 @@
         <div class="blog-content">
           <p>The start of it all. This climb unlocked a serious love of hiking for me. Was overall extremely fun even in the bad conditions.</p>
           <p>Had a guide doing the O' Shea's Gully route, Piaras. This dude was so funny and he ended up bringing us to a nice restaurant afterwards.</p>
-          <img src="../images/Carrauntoohil.jpg" style="width: 50%; height: 50%"/>
+          <img src="../images/Carrauntoohil.jpg" alt="MacGillycuddy's Reeks on the way to Carrauntoohil summit" class="blog-image" loading="lazy">
           <p><strong>Route:</strong> Brother O' Shea's Gully<br>
           <strong>Conditions:</strong> Too Cloudy and Foggy :L<br>
           <strong>Highlight:</strong> Piaras the GOAT Guide</p>
@@ -102,6 +108,10 @@
       <p class="quote-text">Don't Stop.</p>
       <p class="quote-author">- Piaras</p>
     </div>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mark Yang &copy; 2026</p>
+  </footer>
 </body>
 </html>

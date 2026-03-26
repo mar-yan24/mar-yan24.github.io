@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Mark Yang</title>
+  <meta name="description" content="About Mark Yang — education, skills, and background in electrical and computer engineering.">
+  <meta property="og:title" content="About - Mark Yang">
+  <meta property="og:description" content="Education, skills, and background in electrical and computer engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mar-yan24.github.io/pages/about.html">
+  <meta property="og:image" content="https://mar-yan24.github.io/images/profile.png">
   <link rel="stylesheet" href="../styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="nav-container">
-    <div class="menu">
-      <a href="../index.html" class="menu-item">HOME</a>
-      <a href="about.html" class="menu-item active">ABOUT</a>
-      <a href="projects.html" class="menu-item">PROJECTS</a>
-      <a href="peaks.html" class="menu-item">PEAKS</a>
-      <a href="experience.html" class="menu-item">EXPERIENCE</a>
-      <a href="https://github.com/mar-yan24" target="_blank" class="menu-item">GITHUB</a>
-      <a href="contact.html" class="menu-item">CONTACT</a>
-    </div>
+  <nav class="nav-container" aria-label="Main navigation">
+    <ul class="menu">
+      <li><a href="../index.html" class="menu-item">HOME</a></li>
+      <li><a href="about.html" class="menu-item active">ABOUT</a></li>
+      <li><a href="projects.html" class="menu-item">PROJECTS</a></li>
+      <li><a href="peaks.html" class="menu-item">PEAKS</a></li>
+      <li><a href="experience.html" class="menu-item">EXPERIENCE</a></li>
+      <li><a href="https://github.com/mar-yan24" target="_blank" class="menu-item">GITHUB</a></li>
+      <li><a href="contact.html" class="menu-item">CONTACT</a></li>
+    </ul>
   </nav>
-  
-  <div class="container">
+
+  <main class="container">
     <h1>About Me</h1>
     <p class="tagline">Engineer, Climber, Problem Solver</p>
     
@@ -29,7 +35,7 @@
       <div class="text-content">
         <p>I'm Mark Yang, an Electrical and Computer Engineering student at Northeastern University with a passion for both technology and the outdoors.</p>
         
-        <p>I like to tackle engineering problems the same way as climbs. It takes practice and persisted learning to find the 'beta' or the best route to get up each climb. I'm planning on breaking the beta, finding an even better route for every problem I challenge.</p>
+        <p>I like to tackle engineering problems the same way as climbs. It takes practice and persistent learning to find the 'beta' or the best route to get up each climb. I'm planning on breaking the beta, finding an even better route for every problem I challenge.</p>
       </div>
     </div>
     
@@ -37,10 +43,59 @@
       <h2 class="section-title">Education</h2>
       <div class="info-box">
         <h3>Northeastern University</h3>
-        <p><strong>B.S. Electrical and Computer Engineering</strong> | Expected April 2028</p>
-        <p><strong>Relevant Coursework:</strong> Differential Equations, Physics 2, Embedded Design, Circuits and Signals, Fundamentals of Networks, Neuromechanical Simulation of Human Movement</p>
+        <p><strong>B.S. Electrical and Computer Engineering</strong> | Boston, MA | Expected April 2028</p>
+        <p><strong>Relevant Coursework:</strong> Embedded Design, Circuits and Signals, Fundamentals of Networks, Neuromechanical Simulation of Human Movement (MS level), Differential Equations, Physics 2</p>
         <p><strong>GPA:</strong> 3.98/4.0</p>
         <p><strong>Activities:</strong> Putnam Club, Rock Climbing Club, Tau Beta Pi Engineering Honors Society</p>
+      </div>
+      <div class="info-box" style="margin-top: 1.5rem;">
+        <h3>Queens University Belfast</h3>
+        <p><strong>N.U.in Study Abroad Semester</strong> | Belfast, Northern Ireland | September - December 2024</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Verilog</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Simulink/Simscape</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">MuJoCo</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">LTSpice</span>
+            <span class="skill-tag">AWS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">Erebus/Webots</span>
+            <span class="skill-tag">OpenSim</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">Honors & Awards</h2>
+      <div class="info-box">
+        <p><strong>Tau Beta Pi Engineering Honors Society</strong></p>
+        <p><strong>Morgan Stanley Early Insights</strong></p>
+        <p><strong>1st Place</strong> — RoboCup Junior Simulation Division, International Competition, Thailand 2022</p>
       </div>
     </div>
     
@@ -69,6 +124,10 @@
         <p>I also enjoy photography here and there. I did a lot of photo competitions in high school and specialized in street photography.</p>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mark Yang &copy; 2026</p>
+  </footer>
 </body>
 </html>

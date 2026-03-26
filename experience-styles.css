@@ -146,21 +146,9 @@
   font-size: 0.9rem;
 }
 
-/* Tech Tags */
-.tech-used {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* Tech Tags - experience-specific override */
+.job-card .tech-tags {
   margin-top: 1rem;
-}
-
-.tech-tag {
-  background: rgba(255, 255, 255, 0.06);
-  color: #cccccc;
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  border: 1px solid #333333;
 }
 
 /* Elevation Indicator */
