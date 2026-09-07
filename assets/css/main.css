@@ -1,0 +1,652 @@
+/* ==========================================================================
+   Tokens
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --ink: #1c1a17;
+  --body: #3c372f;
+  --mut: #787063;
+  --rule: #e6e0d6;
+  --accent: #2f6144;
+  --accent-soft: #e3ece5;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  --serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --measure: 740px;
+  --pad: 40px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #131211;
+  --surface: #1a1917;
+  --ink: #efebe4;
+  --body: #c8c2b8;
+  --mut: #8d8579;
+  --rule: #2a2724;
+  --accent: #8fbf9f;
+  --accent-soft: #1e2a22;
+  --shadow: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 12px;
+  top: 12px;
+  z-index: 10;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 8px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 20px var(--pad);
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-head__name {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.site-head__name:hover {
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13.5px;
+}
+
+.site-nav a {
+  color: var(--mut);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.theme-toggle {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  color: var(--mut);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-weight: 400;
+  margin: 0;
+}
+
+.page-title {
+  font-size: 42px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.kicker {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mut);
+  margin-bottom: 14px;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.72;
+  margin: 0 0 14px;
+}
+
+.meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mut);
+}
+
+/* Section header: mono label, optional right-hand link, rule underneath. */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 9px;
+  margin: 46px 0 20px;
+}
+
+.section-head h2 {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mut);
+}
+
+.section-head a {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+
+/* Keyed rows: the mono-label + text pattern used by Now, work lists, and the
+   open-source list. */
+.rows {
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 16px;
+  padding: 9px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.row + .row {
+  border-top: 1px solid var(--rule);
+}
+
+.row__key {
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.7;
+  color: var(--mut);
+}
+
+.row__value {
+  color: var(--ink);
+}
+
+.row__value .dim {
+  color: var(--mut);
+}
+
+/* Work cards. Type-led: they read correctly with no image present. */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Image slot. Fixed ratio so a render or GIF drops in later without
+   disturbing layout; simply omit the element until one exists. */
+.card__media {
+  aspect-ratio: 16 / 9;
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--rule);
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: 16px 18px 18px;
+}
+
+.card h3 {
+  font-size: 17px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.card__meta {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--mut);
+  margin-bottom: 9px;
+}
+
+.card__meta .hi {
+  color: var(--accent);
+}
+
+.card p {
+  font-size: 13.5px;
+  line-height: 1.62;
+  margin: 0;
+}
+
+/* Post list */
+.posts {
+  margin: 0;
+}
+
+.post-item {
+  padding: 16px 0;
+}
+
+.post-item + .post-item {
+  border-top: 1px solid var(--rule);
+}
+
+.post-item__title {
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1.32;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.post-item__meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mut);
+  margin-bottom: 7px;
+}
+
+.post-item__meta .tag {
+  color: var(--accent);
+}
+
+.post-item p {
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Data table: the peaks log and CV skill rows. */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.table th {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mut);
+  text-align: left;
+  padding: 0 12px 9px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.table td {
+  padding: 11px 12px 11px 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+  color: var(--ink);
+}
+
+.table td.num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--mut);
+  white-space: nowrap;
+}
+
+/* Long-form prose: post bodies and the About page. */
+.prose {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.prose h2,
+.prose h3 {
+  font-family: var(--serif);
+  margin: 34px 0 10px;
+}
+
+.prose h2 {
+  font-size: 24px;
+}
+
+.prose h3 {
+  font-size: 20px;
+}
+
+.prose p,
+.prose ul,
+.prose ol {
+  margin: 0 0 18px;
+}
+
+.prose img {
+  border-radius: 6px;
+  margin: 26px 0;
+}
+
+.prose figcaption,
+.prose .caption {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mut);
+  margin-top: -18px;
+  margin-bottom: 26px;
+}
+
+.prose blockquote {
+  margin: 26px 0;
+  padding-left: 20px;
+  border-left: 2px solid var(--accent);
+  color: var(--mut);
+  font-style: italic;
+}
+
+.prose code {
+  font-family: var(--mono);
+  font-size: 0.86em;
+  background: var(--accent-soft);
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+.prose pre {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 14px 16px;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Long-form entry: a research project or a CV role. Used where a card would
+   be too cramped for the amount of detail. */
+.entry {
+  padding: 22px 0;
+}
+
+.entry + .entry {
+  border-top: 1px solid var(--rule);
+}
+
+.entry h3 {
+  font-size: 19px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.entry__meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mut);
+  margin-bottom: 10px;
+}
+
+.entry__meta .hi {
+  color: var(--accent);
+}
+
+.entry p {
+  font-size: 14.5px;
+  line-height: 1.68;
+  margin: 0 0 10px;
+}
+
+.entry ul {
+  font-size: 14.5px;
+  line-height: 1.68;
+  margin: 0 0 10px;
+  padding-left: 20px;
+}
+
+.entry__links {
+  font-family: var(--mono);
+  font-size: 11.5px;
+}
+
+/* Tag filter on the writing index. Buttons are inert without JS, and every
+   post stays visible, so the page degrades to a plain list. */
+.tag-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.tag-filter button {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--mut);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.tag-filter button[aria-pressed="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+.home-band {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+.home-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fades the photo into the page rather than ending it on a hard edge. */
+.home-band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, var(--bg));
+}
+
+.home-id {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.home-id .lede {
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-links {
+  margin-top: 18px;
+}
+
+.home-links a {
+  color: var(--mut);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-foot {
+  max-width: var(--measure);
+  margin: 72px auto 0;
+  padding: 22px var(--pad) 44px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--mut);
+}
+
+.site-foot a {
+  color: var(--mut);
+}
+
+.site-foot nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 760px) {
+  :root {
+    --pad: 20px;
+  }
+
+  .page-title {
+    font-size: 34px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .site-nav {
+    gap: 14px;
+    font-size: 13px;
+  }
+}
