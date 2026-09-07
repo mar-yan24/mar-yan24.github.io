@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="wrap" style="padding-top: 44px">
+  {%- if page.kicker %}<div class="kicker">{{ page.kicker }}</div>{% endif -%}
+  <h1 class="page-title">{{ page.title }}</h1>
+  {%- if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif -%}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+</div>

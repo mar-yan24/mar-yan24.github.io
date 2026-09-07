@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {%- include nav.html -%}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+
+  <script>
+    (function () {
+      var button = document.getElementById("theme-toggle");
+      if (!button) return;
+
+      function render(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        button.innerHTML = theme === "dark" ? "&#9728;" : "&#9790;";
+      }
+
+      render(document.documentElement.getAttribute("data-theme") || "light");
+
+      button.addEventListener("click", function () {
+        var next =
+          document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        render(next);
+        try {
+          localStorage.setItem("theme", next);
+        } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>
