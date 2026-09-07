@@ -1,0 +1,56 @@
+title: Mark Yang
+# Short: jekyll-seo-tag renders "<title> | <tagline>", so this must stay brief.
+tagline: Differentiable simulation for musculoskeletal control
+description: >-
+  Computer Engineering at Northeastern University. Differentiable simulation,
+  musculoskeletal control, and open-source contributions to MuJoCo.
+url: "https://mar-yan24.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Mark Yang
+  email: yang.mar@northeastern.edu
+
+github_username: mar-yan24
+linkedin_username: markyang05
+x_username: markyang05
+
+# Posts live under /writing/ alongside the index that lists them.
+permalink: /writing/:title/
+
+# GitHub Pages applies jekyll-theme-primer when no theme is declared, which
+# emits an unused 136KB assets/css/style.css. This site brings its own layouts
+# and stylesheet, so opt out explicitly.
+theme: null
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+feed:
+  path: /feed.xml
+
+defaults:
+  # Default social-card image for link previews. jekyll-seo-tag reads page.image,
+  # not site.image, so it has to be injected as a default rather than set at top level.
+  - scope:
+      path: ""
+    values:
+      image: /images/profile.png
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+exclude:
+  - docs/
+  - scripts/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - files/ApplyingResume.md
+  - .superpowers/
