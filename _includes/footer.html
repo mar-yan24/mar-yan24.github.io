@@ -1,0 +1,12 @@
+<footer class="site-foot">
+  <span>&copy; {{ 'now' | date: "%Y" }} Mark Yang</span>
+
+  <nav aria-label="Elsewhere">
+    <a href="mailto:{{ site.author.email }}">email</a>
+    <a href="https://github.com/{{ site.github_username }}">github</a>
+    <a href="https://x.com/{{ site.x_username }}">x</a>
+    <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">linkedin</a>
+    <a href="{{ '/files/ApplyingResume.pdf' | relative_url }}">cv (pdf)</a>
+    <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+  </nav>
+</footer>
