@@ -1,0 +1,127 @@
+---
+layout: default
+permalink: /research/
+title: Research
+nav: research
+description: Differentiable simulation, musculoskeletal control, and open-source contributions to the MuJoCo ecosystem.
+redirect_from:
+  - /pages/projects.html
+---
+
+<div class="wrap" style="padding-top: 44px">
+  <h1 class="page-title">Research</h1>
+  <p class="lede">Differentiable simulation for musculoskeletal control, and the
+    open-source work that makes it possible.</p>
+
+  <div class="section-head"><h2>Current work</h2></div>
+
+  <article class="entry">
+    <h3>ORCA Hand &mdash; dexterous manipulation</h3>
+    <div class="entry__meta">AI Club, Physical AI &middot; <span class="hi">research lead</span> &middot; ROS2 &middot; MuJoCo</div>
+    <p>Leading a student research group building ETH Zurich&rsquo;s open-source ORCA Hand
+      &mdash; a 17-DoF tendon-driven dexterous hand &mdash; from scratch.</p>
+    <p>We&rsquo;re planning a contribution on soft-contact force dynamics for deformable
+      objects, and building a clean data-collection pipeline to study zero-shot
+      manipulation that reduces the reliance on imitation learning.</p>
+  </article>
+
+  <article class="entry">
+    <h3>Short-horizon actor-critic for musculoskeletal control</h3>
+    <div class="entry__meta">msk-warp &middot; <span class="hi">&starf; 7</span> &middot; Python &middot; MuJoCo Warp &middot; PyTorch &middot; CUDA</div>
+    <p>Bringing end-to-end differentiable GPU simulation to muscle-driven models. SHAC
+      policy training is fast, but only if the simulator returns gradients &mdash; so most
+      of the work has been upstream, adding reverse-mode autodifferentiation to MuJoCo
+      Warp with the DeepMind and NVIDIA Warp teams.</p>
+    <p>Currently testing SHAC on MuJoCo Warp with cartpole and ant actors, ahead of a
+      rigid 22-muscle myoleg model for GPU-accelerated locomotion training.</p>
+    <div class="entry__links">
+      <a href="https://github.com/mar-yan24/msk-warp">msk-warp</a> &middot;
+      <a href="https://github.com/mar-yan24/mjwarp_adtesting">mjwarp_adtesting</a>
+    </div>
+  </article>
+
+  <article class="entry">
+    <h3>Bipedal spring-loaded inverted pendulum runner</h3>
+    <div class="entry__meta">bSLIP_1 &middot; MATLAB &middot; Simulink &middot; Simscape Multibody</div>
+    <p>A two-leg bSLIP runner with stance/swing PD control and contact and friction
+      modelling. Apex-to-apex Poincar&eacute; return-map analysis, plus a one-step deadbeat
+      regulator using touchdown hip angle to hold apex height over rough terrain.</p>
+    <div class="entry__links">
+      <a href="https://github.com/mar-yan24/bSLIP_1">bSLIP_1</a>
+    </div>
+  </article>
+
+  <div class="section-head"><h2>Open source</h2></div>
+
+  <div class="rows">
+    <div class="row">
+      <div class="row__key">merged</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco/pull/3158">mujoco #3158</a>
+        <span class="dim">&mdash; fix VFS resource loading for flexcomp mesh and gmsh types</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">merged</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco_warp/pull/1282">mujoco_warp #1282</a>
+        <span class="dim">&mdash; fix cache_kernel hashing for numpy scalars</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">co-author</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco_warp/pull/1423">mujoco_warp #1423</a>
+        <span class="dim">&mdash; reverse-mode autodiff through smooth dynamics, the constraint solver, and contacts</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">co-author</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco_warp/pull/1422">mujoco_warp #1422</a>
+        <span class="dim">&mdash; deterministic simulation: stable contact ordering and solver reductions</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">open</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco/pull/3155">mujoco #3155</a>
+        <span class="dim">&mdash; UTF-8 file path handling on Windows</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">open</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco/pull/3162">mujoco #3162</a>
+        <span class="dim">&mdash; adhesion timeconst feature</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">open</div>
+      <div class="row__value">
+        <a href="https://github.com/google-deepmind/mujoco/pull/3170">mujoco #3170</a>
+        <span class="dim">&mdash; Windows malloc support</span></div>
+    </div>
+    <div class="row">
+      <div class="row__key">open</div>
+      <div class="row__value">
+        <a href="https://github.com/mmacklin/warp/pull/2">warp #2</a>
+        <span class="dim">&mdash; determinism fixes targeted at MuJoCo Warp</span></div>
+    </div>
+  </div>
+
+  <div class="section-head"><h2>Earlier work</h2></div>
+
+  <article class="entry">
+    <h3>RoboCup Junior maze robot</h3>
+    <div class="entry__meta">C++ &middot; Erebus &middot; Webots &middot; <span class="hi">1st place, Thailand 2022</span></div>
+    <p>Breadth-first search navigation on the Erebus simulation platform, with custom maze
+      worlds built to shake out edge cases. First in the simulation division at the 2022
+      RoboCup Junior international competition.</p>
+    <div class="entry__links">
+      <a href="https://drive.google.com/file/d/1IzM4613BwaG0BrGJMKeiEcESBxbQTQc0/view?usp=sharing">project poster</a>
+    </div>
+  </article>
+
+  <article class="entry">
+    <h3>Hexapod robot</h3>
+    <div class="entry__meta">Verilog &middot; DE1-SoC FPGA &middot; C++</div>
+    <p>Servo control for a hexapod walker on an Intel DE1-SoC, with a Quartus truth-gate
+      circuit generating PWM and a C++ program driving the servos over MMIO from the ARM
+      core.</p>
+  </article>
+</div>
